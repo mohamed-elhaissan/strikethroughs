@@ -9,7 +9,7 @@ export default function Home() {
     <div className="font-sans w-full xl:w-1/2 mx-auto  tracking-[-.01em]  flex flex-col items-center justify-evenly min-h-screen p-8 pb-20  sm:p-20">
       <Toaster richColors position="top-right"/>
       <div>
-        <h1 className="text-7xl font-medium">Playful Todolist</h1>
+        <h1 className="text-7xl font-medium">Playful Todo List</h1>
         <p className="opacity-50 my-2">
           A playful todo List component with animated wavy strike through for
           each completed task.
@@ -18,7 +18,7 @@ export default function Home() {
           Made by
           <Link
             href={"https://github.com/mohamed-elhaissan"}
-            className="text-[#0073c5]"
+            className="linkColor"
           >
             {" "}
             Mohamed elhaissan
