@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -8,17 +7,18 @@ interface IPlayFul {
   id: string;
 }
 
-export default function PlayFul({ text,id }: IPlayFul) {
+export default function PlayFul({ text, id }: IPlayFul) {
   const [isChecked, setIsChecked] = useState<boolean>(false);
+
   return (
-    <div className="  flex items-center gap-3 p-2 px-4 text-base rounded-xl">
+    <div className="flex items-center gap-3 p-2 px-4 text-base rounded-xl">
       <input type="checkbox" id={id} className="peer sr-only" />
       <label
         onClick={() => setIsChecked(!isChecked)}
         htmlFor={id}
-        className="w-5 h-5 rounded relative cursor-pointer overflow-hidden peer-checked:[&>span]:opacity-100 peer-checked:[&>svg]:scale-85 "
+        className="w-5 h-5 rounded relative cursor-pointer overflow-hidden peer-checked:[&>span]:opacity-100 peer-checked:[&>svg]:scale-85"
         style={{
-          border: "1px solid gray ",
+          border: "1px solid gray",
         }}
       >
         <svg
@@ -45,25 +45,28 @@ export default function PlayFul({ text,id }: IPlayFul) {
             stroke="oklch(0.205 0 0)"
             fill="none"
             strokeWidth="3.5px"
-          ></path>
+          />
         </svg>
-        <span className="absolute bg-[var(--foreground)] inset-0 w-full h-full opacity-0  pointer-events-none z-10"></span>
+        <span className="absolute bg-[var(--foreground)] inset-0 w-full h-full opacity-0 pointer-events-none z-10" />
       </label>
 
-      <div className="relative">
-        {text}
+      <div className="relative ">
+        <span className=" text-nowrap">{text}</span>
         <svg
           width="340"
           height="32"
           viewBox="0 0 340 32"
-          className="absolute left-0 top-1/2 -translate-y-1/2  pointer-events-none z-20 w-full h-10"
+          className="absolute left-0 top-1/2 -translate-y-1/2 pointer-events-none z-20 w-full h-10"
         >
           <motion.path
             initial={{
               pathLength: 0,
-              opacity : 0
+              opacity: 0,
             }}
-            animate={{ pathLength: isChecked ? 1 : 0 ,opacity : isChecked ? 1 :0}}
+            animate={{
+              pathLength: isChecked ? 1 : 0,
+              opacity: isChecked ? 1 : 0,
+            }}
             transition={{
               duration: 1.25,
               ease: "easeInOut",
@@ -80,7 +83,7 @@ export default function PlayFul({ text,id }: IPlayFul) {
             strokeDashoffset="0px"
             strokeDasharray="1px 1px"
             stroke="oklch(0.97 0 0)"
-          ></motion.path>
+          />
         </svg>
       </div>
     </div>
