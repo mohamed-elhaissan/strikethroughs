@@ -9,7 +9,7 @@ export default function Home() {
     <div className="font-sans w-full xl:w-1/2 mx-auto  tracking-[-.01em]  flex flex-col items-center justify-evenly min-h-screen p-8 pb-20  sm:p-20">
       <Toaster richColors position="top-right"/>
       <div>
-        <h1 className="text-7xl font-medium">Playful Todo List</h1>
+        <h1 className="text-5xl md:text-7xl font-medium">Playful Todo List</h1>
         <p className="opacity-50 my-2">
           A playful todo List component with animated wavy strike through for
           each completed task.
@@ -35,7 +35,7 @@ export default function Home() {
         <div className="flex items-end  justify-end gap-3 mb-4 relative ">
           <button
             onClick={() => copyToClipBoard()}
-            className="py-2 bg-white/[0.06] cursor-pointer px-4 w-1/7    relative z-20  rounded-md"
+            className="py-2 bg-white/[0.06] cursor-pointer px-4 md:w-1/7 w-1/3    relative z-20  rounded-md"
           >
             Copy
           </button>
